@@ -1,9 +1,23 @@
 <?php 
-if(isset($_POST['reponse4'])) {
     $reponse = $_COOKIE['reponse']; 
-    $reponse += $_POST['reponse4'];
+    //echo $_COOKIE['reponse']; 
+
+    
+if (isset($_POST['reponse0'])) {
+    $valeur = 0;
+    //echo "\nLe bouton 1 a été cliqué et la valeur est $valeur.";
+} elseif (isset($_POST['reponse1'])) {
+    $valeur = 2;
+    //echo "Le bouton 2 a été cliqué et la valeur est $valeur.";
+} else {
+    //echo "Aucun bouton cliqué.";
+}
+$reponse += $valeur ; 
+
+
+
     setcookie('reponse', $reponse);
-}?>
+?>
 
 <!doctype html>
 <html lang="en">

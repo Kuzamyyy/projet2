@@ -1,15 +1,15 @@
 <?php 
     echo "NULLBYTE" ; 
     $reponse = $_COOKIE['reponse']; 
-    echo $_COOKIE['reponse']; 
+    //echo $_COOKIE['reponse']; 
 
     
 if (isset($_POST['reponse0'])) {
     $valeur = 0;
-    echo "\nLe bouton 1 a été cliqué et la valeur est $valeur.";
+    //echo "\nLe bouton 1 a été cliqué et la valeur est $valeur.";
 } elseif (isset($_POST['reponse1'])) {
     $valeur = 2;
-    echo "Le bouton 2 a été cliqué et la valeur est $valeur.";
+    //echo "Le bouton 2 a été cliqué et la valeur est $valeur.";
 } else {
     echo "Aucun bouton cliqué.";
 }
