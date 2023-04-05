@@ -1,3 +1,26 @@
+<?php 
+    $reponse = $_COOKIE['reponse']; 
+    //echo $_COOKIE['reponse']; 
+
+    
+if (isset($_POST['reponse0'])) {
+    $valeur = 0;
+    //echo "\nLe bouton 1 a été cliqué et la valeur est $valeur.";
+} elseif (isset($_POST['reponse1'])) {
+    $valeur = 2;
+    //echo "Le bouton 2 a été cliqué et la valeur est $valeur.";
+} else {
+    //echo "Aucun bouton cliqué.";
+}
+$reponse += $valeur ; 
+
+
+
+    setcookie('reponse', $reponse);
+?>
+
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -26,17 +49,23 @@
 </head>
 <body>
     <CENTER>
-        <form action="traitement.php"method="post"s>
+        <form action="question4.php"method="post">
         </br>
     </br>
-            <h1>AVEZ VOUS DEJA VOLER</h1>
-        </br>
-    </br>
+            <h1>A QUELLE FRENQUENCE MENTEZ VOUS</h1>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-    <input type="hidden" name="question_courante" value="q2" />
-    <button class="btn btn-success" type="submit"  name="reponse2" value=0>Oui</button>
-    <button class="btn btn-danger" type="submit"  name="reponse2" value=2>Non</button>
-            </CENTER>
+    <input type="hidden" name="question_courante" value="q3" />
+        </br>
+        </br>
+    <select name="choix">
+        <option value="4" >jamais</option>
+        <option value="2" >parfois</option>
+        <option value="0" >souvent</option>
+      </select>
+      <input type="submit" class="btn btn-success" name="entré" value="envoyer"></button>
+    </CENTER>
+</form>
+        
 
 
 </body>

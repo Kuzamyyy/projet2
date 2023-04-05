@@ -17,8 +17,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         if ($compte_bon) {
+            setcookie('reponse' , 0) ; 
             header('Location: index2.php');
-            exit; // arrêter l'exécution du script après la redirection
+            exit; // arrï¿½ter l'exï¿½cution du script aprï¿½s la redirection
         } else {
              echo '<div style="color:red; text-align:center;">Adresse mail ou mot de passe incorrect !</div>';
         }
@@ -30,9 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <link rel="stylesheet" href="login.css">
 <div class="loginBox">
     <img class="user" src="https://freepngimg.com/download/icon/1000546-detective-emoji-man-icon-download-free.png" height="100px" width="100px">
-    <h3>Test de Pureté</h3>
+    <h3>Test de Puretï¿½</h3>
     <form action="login.php" method="post">
         <div class="inputBox"> <input id="uname" type="text" name="pseudo" placeholder="Username"> <input id="pass" type="password" name="mdp" placeholder="Password"> </div> <input type="submit" name="envoi" value="Login">
     </form>
-    <a href="#">Mot de Passe Oublié?<br> </a>
+    <a href="#">Mot de Passe Oubliï¿½?<br> </a>
 </div>
