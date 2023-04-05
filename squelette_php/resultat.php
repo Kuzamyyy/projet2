@@ -1,26 +1,25 @@
 <?php 
-session_start();
-?>
+    $reponse = $_COOKIE['reponse']; 
+    //echo $_COOKIE['reponse']; 
+    //echo $_POST['choix'] ; 
+    
 
+    $reponse += $_POST['choix2'] ; 
+    
+
+
+
+    setcookie('reponse', $reponse);
+?>
 <!DOCTYPE html>
 <body>
-
-
 <?php
-// Vérifier si la variable $reponse est définie dans la session
-if(!isset($_SESSION['reponse'])) {
-    header("Location: index.php"); // Rediriger vers la page d'accueil si la variable n'est pas définie
-}
-
-// Récupérer la valeur de la variable $reponse depuis la session
-$reponse = $_SESSION['reponse'];
-
 // Afficher le résultat
 echo "<p>Votre score est de " . $reponse . " points</p>";
 
-// Détruire la session pour nettoyer les données
-session_destroy();
-?>
+// Supprimer le cookie pour nettoyer les données
+//setcookie("reponse", "", time()-3600);
 
+?>
 </body>
-</html>
+</html> 

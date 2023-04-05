@@ -1,4 +1,16 @@
+<?php 
+    $reponse = $_COOKIE['reponse']; 
+    //echo $_COOKIE['reponse']; 
+    //echo $_POST['choix'] ; 
+    
 
+    $reponse += $_POST['choix'] ; 
+    
+
+
+
+    setcookie('reponse', $reponse);
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,16 +39,16 @@
 </head>
 <body>
     <CENTER>
-        <form action="traitement.php"method="post">
+        <form action="question5.php"method="post">
         </br>
     </br>
-            <h1>AVEZ VOUS DEJA TRICHER PENDANT UN EXAMENS ?</h1>
+            <h1>AVEZ VOUS DEJA TRICHER PENDANT UN EXAMEN ?</h1>
         </br>
     </br>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
     <input type="hidden" name="question_courante" value="q4" />
-    <button class="btn btn-success" type="submit"  name="reponse4" value=0>Oui</button>
-    <button class="btn btn-danger" type="submit"  name="reponse4" value=2>Non</button>
+    <button class="btn btn-success" type="submit"  name="reponse0" value=0>Oui</button>
+    <button class="btn btn-danger" type="submit"  name="reponse1" value=2>Non</button>
             </CENTER>
         
 

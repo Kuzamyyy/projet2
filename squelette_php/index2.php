@@ -1,6 +1,5 @@
 <?php
 session_start();
-$Username = "username du mec"; // Username entré par le mec
 ?>
 
 <!doctype html>
@@ -23,7 +22,7 @@ $Username = "username du mec"; // Username entré par le mec
             <div class=" collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto ">
                     <li class="nav-item">
-                        <a class="nav-link mx-2 active" aria-current="page"><?php echo $Username; ?></a>
+                        <a class="nav-link mx-2 active" aria-current="page"><?php echo $_SESSION['Username'] ; ?></a>
                     </li>
                 </ul>
             </div>
@@ -35,9 +34,9 @@ $Username = "username du mec"; // Username entré par le mec
     <CENTER>
             <h1>Bienvenue</h1>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
-            <form action="question1.html">
+            <form action="question1.php">
 
-                <button type="button" class="btn btn-dark" onClick="javascript:document.location.href='question1.html'">Commencer</button>
+                <button type="button" class="btn btn-dark" onClick="javascript:document.location.href='question1.php'">Commencer</button>
             </form>
 </CENTER>
 
